@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body style="font-family:'Segoe UI'">
+    <h1>使用 ASP.Net Core 2 建立 EchoBot</h1>
+    <p>這個對話機器人會回傳接收到的對話。</p>
+    <p>請使用 Bot Framework Emulator 對您的對話機器人進行偵錯，並將下列 URL 複製至模擬器 Endpoint URL 欄位中。</p>
+    <div style="padding-left: 50px;" id="botBaseUrl"></div>
+    <p>如需發行對話機器人服務，請至 <a href="https://www.botframework.com/">Bot Framework 網站</a>進行對話機器人註冊，請提供下列 URL 進行註冊。</p>
+    <div style="padding-left: 50px;">
+        https://<strong>{your domain name}</strong>/api/messages
+    </div>
+    <script>
+        var urlDiv = document.getElementById("botBaseUrl");
+        var aTag = document.createElement('a');
+        aTag.setAttribute('href', location.protocol + "//" + location.host + "/api/messages");
+        aTag.innerHTML = location.protocol + "//" + location.host + "/api/messages";
+        urlDiv.appendChild(aTag);
+    </script>
+</body>
+</html>
